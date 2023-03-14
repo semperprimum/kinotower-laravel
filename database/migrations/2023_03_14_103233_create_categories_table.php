@@ -14,10 +14,8 @@ return new class extends Migration
         Schema::create('categories', function (Blueprint $table) {
             $table->id();
             $table->string('name', 50)->nullable(false);
-            $table->unsignedBigInteger('parent_id')->nullable();
+            $table->foreignId('parent_id')->nullable()->constrained("categories");
             $table->softDeletes();
-            $table->timestamps();
-            $table->foreign('parent_id')->references('id')->on('categories');
         });
     }
 
