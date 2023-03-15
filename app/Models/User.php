@@ -19,8 +19,10 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'fio',
+        'birthday',
+        'gender_id',
         'email',
-        'password',
+        'password'
     ];
 
     public function reviews()

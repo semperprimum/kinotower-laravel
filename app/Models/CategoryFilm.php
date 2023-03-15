@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class CategoryFilm extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'category_id',
+        'film_id'
+    ];
 }

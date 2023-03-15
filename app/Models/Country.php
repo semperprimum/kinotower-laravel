@@ -9,6 +9,10 @@ class Country extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'name'
+    ];
+
     public function films()
     {
         return $this->hasMany(Film::class);

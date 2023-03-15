@@ -11,6 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
+
         Schema::create('genders', function (Blueprint $table) {
             $table->id();
             $table->string('name', 10)->nullable(false);
