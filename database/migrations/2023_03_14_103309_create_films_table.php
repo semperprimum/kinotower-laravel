@@ -21,7 +21,6 @@ return new class extends Migration
             $table->string('link_img', 255)->nullable();
             $table->string('link_kinopoisk', 255)->nullable();
             $table->string('link_video', 255)->nullable(false);
-
             $table->timestamps();
             $table->softDeletes();
         });
