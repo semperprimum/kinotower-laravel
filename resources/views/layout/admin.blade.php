@@ -63,7 +63,8 @@
                     <img src="/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
                 </div>
                 <div class="info">
-                    <a href="#" class="d-block">Admin</a>
+                    <a href="/" class="d-block">{{ auth('admin')->user()->username }}</a>
+                    <a style="color: #f22613; border: 1px solid red; text-align: center" href="{{ route('logout') }}" class="d-block mt-2">Выход</a>
                 </div>
             </div>
 
@@ -142,12 +143,5 @@
 <script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE -->
 <script src="/js/adminlte.js"></script>
-
-<!-- OPTIONAL SCRIPTS -->
-<script src="/plugins/chart.js/Chart.min.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="/js/demo.js"></script>
-<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="/js/pages/dashboard3.js"></script>
 </body>
 </html>
