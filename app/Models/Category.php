@@ -13,6 +13,8 @@ class Category extends Model
       'name', 'parent_id'
     ];
 
+    public $timestamps = false;
+
     public function categories()
     {
         return $this->hasMany(Category::class, "parent_id");

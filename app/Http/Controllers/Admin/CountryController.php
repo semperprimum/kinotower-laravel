@@ -32,24 +32,28 @@ class CountryController extends Controller
      */
     public function store(CountryRequest $request)
     {
+        Country::create($request->validated());
 
+        return redirect(route('countries.index'));
     }
 
     /**
      * Display the specified resource.
      */
 
-    public function edit(string $id)
+    public function edit(Country $country)
     {
-        //
+        return view('admin.country.create', compact('country'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(CountryRequest $request, Country $country)
     {
-        //
+        $country->update($request->validated());
+
+        return redirect(route('countries.index'));
     }
 
     /**
