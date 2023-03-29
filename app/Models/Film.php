@@ -22,7 +22,7 @@ class Film extends Model
 
     public function country()
     {
-        return $this->belongsTo(Contry::class);
+        return $this->belongsTo(Country::class);
     }
 
     public function categories()

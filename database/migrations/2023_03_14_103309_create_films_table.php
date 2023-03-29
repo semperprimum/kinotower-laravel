@@ -13,14 +13,14 @@ return new class extends Migration
     {
         Schema::create('films', function (Blueprint $table) {
             $table->id();
-            $table->string('name', 150)->nullable(false);
+            $table->string('name', 150);
             $table->foreignId("country_id")->constrained("countries");
-            $table->smallInteger('duration')->unsigned()->nullable(false);
-            $table->year('year_of_issue')->nullable(false);
-            $table->tinyInteger('age')->unsigned()->nullable(false);
+            $table->smallInteger('duration')->unsigned();
+            $table->year('year_of_issue');
+            $table->tinyInteger('age')->unsigned();
             $table->string('link_img', 255)->nullable();
             $table->string('link_kinopoisk', 255)->nullable();
-            $table->string('link_video', 255)->nullable(false);
+            $table->string('link_video', 255);
             $table->timestamps();
             $table->softDeletes();
         });
