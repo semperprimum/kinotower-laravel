@@ -20,6 +20,7 @@
                          <div class="year"><h5>Year of Issue: {{ $film->year_of_issue }}</h5></div>
                     </li>
                 </ul>
+
                     <div class="last-updated ml-4"><p>Last Updated: {{ $film->updated_at->diffForHumans() }}</p></div>
             </div>
         </div>

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\CategoryFilmController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\MainController;
@@ -17,4 +18,5 @@ Route::middleware(['auth:admin'])->group(function() {
    Route::resource('countries', CountryController::class)->except(['show']);
    Route::resource('categories', CategoryController::class)->except(['show']);
    Route::resource('films', FilmController::class);
+   Route::resource('categoryfilms', CategoryFilmController::class);
 });

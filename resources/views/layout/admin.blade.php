@@ -71,21 +71,36 @@
             <!-- Sidebar Menu -->
             <nav class="mt-2">
                 <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-                    <li class="nav-header">EXAMPLES</li>
+                    <li class="nav-header">Routes</li>
                     <li class="nav-item">
-                        <a href="pages/calendar.html" class="nav-link">
-                            <i class="nav-icon fas fa-calendar-alt"></i>
+                        <a href="{{ route('films.index') }}" class="nav-link">
+                            <i class="nav-icon fas fa-film"></i>
                             <p>
-                                Calendar
-                                <span class="badge badge-info right">2</span>
+                                Films
                             </p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="pages/gallery.html" class="nav-link">
-                            <i class="nav-icon far fa-image"></i>
+                        <a href="{{ route('categories.index') }}" class="nav-link">
+                            <i class="nav-icon fas fa-list"></i>
                             <p>
-                                Gallery
+                                Categories
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ route('countries.index') }}" class="nav-link">
+                            <i class="nav-icon fas fa-globe"></i>
+                            <p>
+                                Countries
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ route('categoryfilms.index') }}" class="nav-link">
+                            <i class="nav-icon fas fa-video"></i>
+                            <p>
+                                Films & Categories
                             </p>
                         </a>
                     </li>
@@ -98,23 +113,7 @@
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
-        <!-- Content Header (Page header) -->
-        <div class="content-header">
-            <div class="container-fluid">
-                <div class="row mb-2">
-                    <div class="col-sm-6">
-                        <h1 class="m-0">@yield('title')</h1>
-                    </div><!-- /.col -->
-                    <div class="col-sm-6">
-                        <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">Dashboard v3</li>
-                        </ol>
-                    </div><!-- /.col -->
-                </div><!-- /.row -->
-            </div><!-- /.container-fluid -->
-        </div>
-        <!-- /.content-header -->
+
 
         <!-- Main content -->
         <div class="content">

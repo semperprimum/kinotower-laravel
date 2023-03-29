@@ -27,7 +27,7 @@ class Film extends Model
 
     public function categories()
     {
-        return $this->belongsToMany(Category::class, 'category_films');
+        return $this->hasMany(Category::class, 'category_films');
     }
 
     public function review()

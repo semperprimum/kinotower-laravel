@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\FilmRequest;
+use App\Models\Category;
+use App\Models\CategoryFilm;
 use App\Models\Country;
 use App\Models\Film;
 use Illuminate\Http\Request;
@@ -45,7 +47,8 @@ class FilmController extends Controller
      */
     public function show(Film $film)
     {
-        return view('admin.film.show', compact('film'));
+        $categoriesfilm = CategoryFilm::all();
+        return view('admin.film.show', compact('film', 'categoriesfilm'));
     }
 
     /**
