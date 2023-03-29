@@ -47,8 +47,7 @@ class FilmController extends Controller
      */
     public function show(Film $film)
     {
-        $categoriesfilm = CategoryFilm::all();
-        return view('admin.film.show', compact('film', 'categoriesfilm'));
+        return view('admin.film.show', compact('film'));
     }
 
     /**
